@@ -1,0 +1,65 @@
+/* Restaurant Details */
+
+#restaurantMeta {
+    margin-top: 15px;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.favorite-btn {
+    padding: 12px 20px;
+    border: 1px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.favorite-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.food-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.food-price-row strong {
+    font-size: 18px;
+}
+
+.food-price-row button {
+    width: auto;
+    padding: 9px 18px;
+    margin: 0;
+}
+
+/* Favorites */
+
+.favorites-page {
+    padding: 40px 7%;
+    min-height: 55vh;
+}
+
+.remove-favorite-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px;
+    border: 1px solid #d33 !important;
+    background: white !important;
+    color: #d33 !important;
+}
+
+.remove-favorite-btn:hover {
+    background: #d33 !important;
+    color: white !important;
+}
+
+.favorite-browse-btn {
+    width: auto;
+    padding: 12px 25px;
+}

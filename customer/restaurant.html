@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Menu - FoodRush</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/restaurant.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">FoodRush</a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search food..."
+            >
+
+            <button onclick="searchFood()">
+                🔍
+            </button>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Restaurant Details -->
+
+    <section class="restaurant-header">
+
+        <div>
+
+            <h1 id="restaurantName">
+                Restaurant
+            </h1>
+
+            <p id="restaurantCuisine">
+                Loading...
+            </p>
+
+            <p id="restaurantAddress">
+                📍 Loading...
+            </p>
+
+            <div id="restaurantMeta"></div>
+
+        </div>
+
+        <button
+            id="favoriteButton"
+            class="favorite-btn"
+            onclick="toggleFavorite()"
+        >
+            ♡ Favorite
+        </button>
+
+    </section>
+
+
+    <!-- Menu -->
+
+    <main class="restaurant-page">
+
+        <!-- Categories -->
+
+        <aside class="filters">
+
+            <h2>Menu</h2>
+
+            <div class="filter-section">
+
+                <h3>Categories</h3>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="foodCategory"
+                        value="All"
+                        checked
+                    >
+                    All Items
+                </label>
+
+                <div id="categoryList"></div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Food -->
+
+        <section class="restaurant-results">
+
+            <div class="results-top">
+
+                <div>
+
+                    <h2 id="menuTitle">
+                        Menu
+                    </h2>
+
+                    <p id="foodCount">
+                        0 items
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="foodList"
+                class="restaurant-grid"
+            >
+            </div>
+
+
+            <div
+                id="noFood"
+                class="no-results"
+                style="display:none;"
+            >
+
+                <div>🍽️</div>
+
+                <h2>
+                    No food items found
+                </h2>
+
+                <p>
+                    Try another category.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>FoodRush</h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="orders.html">Orders</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📧 support@foodrush.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/restaurant.js"></script>
+
+</body>
+
+</html>

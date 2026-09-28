@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - FoodRush</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+
+    <h2>FoodRush Admin</h2>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html">Customers</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </nav>
+
+</header>
+
+<main class="admin-container">
+
+    <h1>Customers</h1>
+
+    <section class="admin-table-card">
+
+        <h2>Registered Customers</h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Total Orders</th>
+                        <th>Joined</th>
+                    </tr>
+                </thead>
+
+                <tbody id="customersTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/admin-customers.js"></script>
+
+</body>
+</html>

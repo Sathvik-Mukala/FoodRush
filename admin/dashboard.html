@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard - FoodRush</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Admin Navbar -->
+
+    <nav class="admin-navbar">
+
+        <div class="logo">
+            FoodRush Admin
+        </div>
+
+        <div class="admin-nav-links">
+
+            <a
+                href="dashboard.html"
+                class="active"
+            >
+                Dashboard
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="customers.html">
+                Customers
+            </a>
+
+            <button onclick="logoutAdmin()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Header -->
+
+    <section class="admin-header">
+
+        <div>
+
+            <h1>
+                Admin Dashboard
+            </h1>
+
+            <p>
+                Manage and monitor your FoodRush platform
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+
+    <main class="admin-container">
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏪
+                </div>
+
+                <div>
+
+                    <span>
+                        Restaurants
+                    </span>
+
+                    <strong id="restaurantCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🍔
+                </div>
+
+                <div>
+
+                    <span>
+                        Food Items
+                    </span>
+
+                    <strong id="foodCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    👥
+                </div>
+
+                <div>
+
+                    <span>
+                        Customers
+                    </span>
+
+                    <strong id="customerCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📦
+                </div>
+
+                <div>
+
+                    <span>
+                        Orders
+                    </span>
+
+                    <strong id="orderCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Revenue -->
+
+        <section class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Sales Overview
+                    </h2>
+
+                    <p>
+                        Current platform statistics
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="revenue-card">
+
+                <span>
+                    Total Revenue
+                </span>
+
+                <strong id="totalRevenue">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recent Orders -->
+
+        <section class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+                    <p>
+                        Latest customer orders
+                    </p>
+
+                </div>
+
+                <a
+                    href="orders.html"
+                    class="admin-link"
+                >
+                    View All
+                </a>
+
+            </div>
+
+
+            <div
+                id="recentOrders"
+                class="recent-orders"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+
+        <section class="dashboard-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+                <a href="restaurants.html">
+
+                    <span>🏪</span>
+
+                    Manage Restaurants
+
+                </a>
+
+
+                <a href="menu.html">
+
+                    <span>🍔</span>
+
+                    Manage Menu
+
+                </a>
+
+
+                <a href="orders.html">
+
+                    <span>📦</span>
+
+                    Manage Orders
+
+                </a>
+
+
+                <a href="customers.html">
+
+                    <span>👥</span>
+
+                    Manage Customers
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

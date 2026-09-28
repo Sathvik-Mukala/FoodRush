@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Restaurants - FoodRush</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+    <h2>FoodRush Admin</h2>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html">Customers</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </nav>
+</header>
+
+<main class="admin-container">
+
+    <h1>Manage Restaurants</h1>
+
+    <section class="admin-form-card">
+
+        <h2 id="formTitle">Add Restaurant</h2>
+
+        <form id="restaurantForm">
+
+            <input type="hidden" id="restaurantId">
+
+            <div class="form-grid">
+
+                <input type="text" id="name"
+                    placeholder="Restaurant Name" required>
+
+                <input type="text" id="cuisine"
+                    placeholder="Cuisine" required>
+
+                <input type="number" id="rating"
+                    placeholder="Rating" min="1" max="5" step="0.1" required>
+
+                <input type="text" id="deliveryTime"
+                    placeholder="Delivery Time e.g. 30-40 min" required>
+
+                <input type="number" id="deliveryFee"
+                    placeholder="Delivery Fee" min="0" required>
+
+                <input type="text" id="offer"
+                    placeholder="Offer e.g. 20% OFF">
+
+                <input type="text" id="address"
+                    placeholder="Address" required>
+
+            </div>
+
+            <button type="submit" class="admin-btn">
+                Save Restaurant
+            </button>
+
+            <button type="button"
+                    id="cancelBtn"
+                    class="admin-btn secondary"
+                    onclick="resetForm()"
+                    style="display:none;">
+                Cancel
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="admin-table-card">
+
+        <h2>Restaurants</h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cuisine</th>
+                        <th>Rating</th>
+                        <th>Delivery</th>
+                        <th>Fee</th>
+                        <th>Offer</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="restaurantTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/admin-restaurants.js"></script>
+
+</body>
+</html>

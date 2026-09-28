@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Confirmed - FoodRush</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">FoodRush</a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="success-page">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1>
+            Order Placed Successfully!
+        </h1>
+
+        <p>
+            Thank you for ordering with FoodRush.
+        </p>
+
+
+        <div class="success-card">
+
+            <h2>
+                Order Details
+            </h2>
+
+            <div class="success-row">
+
+                <span>
+                    Order ID
+                </span>
+
+                <strong id="orderId">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="success-row">
+
+                <span>
+                    Order Status
+                </span>
+
+                <strong id="orderStatus">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="success-row">
+
+                <span>
+                    Payment
+                </span>
+
+                <strong id="paymentMethod">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="success-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="orderTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="success-row">
+
+                <span>
+                    Delivery To
+                </span>
+
+                <strong id="deliveryAddress">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="success-actions">
+
+            <button
+                class="primary-btn"
+                onclick="trackOrder()"
+            >
+                Track Order
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="viewOrders()"
+            >
+                View My Orders
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="continueShopping()"
+            >
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>FoodRush</h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="orders.html">Orders</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📧 support@foodrush.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/order-success.js"></script>
+
+</body>
+
+</html>

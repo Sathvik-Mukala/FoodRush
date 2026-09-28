@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRush - Food Delivery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Food<span>Rush</span>
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="customer/restaurants.html">
+            Restaurants
+        </a>
+
+        <a href="#offers">
+            Offers
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </nav>
+
+
+    <div class="nav-buttons">
+
+        <a href="login.html"
+           class="login-btn">
+            Login
+        </a>
+
+        <a href="register.html"
+           class="signup-btn">
+            Sign Up
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <div class="badge">
+                🍴 Delicious food delivered fast
+            </div>
+
+
+            <h1>
+                Your favorite food,
+                <span>delivered to you.</span>
+            </h1>
+
+
+            <p>
+                Discover the best restaurants and
+                delicious meals around you.
+            </p>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for food or restaurants..."
+                >
+
+                <button onclick="searchFood()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-food">
+
+            <div class="food-circle">
+                🍕
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <p>EXPLORE</p>
+
+        <h2>
+            What's on your mind?
+        </h2>
+
+    </div>
+
+
+    <div class="categories">
+
+
+        <div class="category"
+             onclick="searchCategory('Pizza')">
+
+            <div>🍕</div>
+
+            <h3>Pizza</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Burger')">
+
+            <div>🍔</div>
+
+            <h3>Burger</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Biryani')">
+
+            <div>🍚</div>
+
+            <h3>Biryani</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Chinese')">
+
+            <div>🍜</div>
+
+            <h3>Chinese</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Indian')">
+
+            <div>🍛</div>
+
+            <h3>Indian</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Dessert')">
+
+            <div>🍰</div>
+
+            <h3>Desserts</h3>
+
+        </div>
+
+
+        <div class="category"
+             onclick="searchCategory('Drinks')">
+
+            <div>🥤</div>
+
+            <h3>Drinks</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="offers"
+         id="offers">
+
+    <div class="section">
+
+        <div class="section-title">
+
+            <p>SPECIAL OFFERS</p>
+
+            <h2>
+                Deals you don't want to miss
+            </h2>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+
+            <div class="offer orange">
+
+                <div>
+
+                    <small>
+                        FIRST ORDER
+                    </small>
+
+                    <h2>
+                        50% OFF
+                    </h2>
+
+                    <p>
+                        Use code WELCOME50
+                    </p>
+
+                </div>
+
+                <div class="offer-icon">
+                    🎁
+                </div>
+
+            </div>
+
+
+            <div class="offer dark">
+
+                <div>
+
+                    <small>
+                        SPECIAL DEAL
+                    </small>
+
+                    <h2>
+                        ₹100 OFF
+                    </h2>
+
+                    <p>
+                        Use code FIRST100
+                    </p>
+
+                </div>
+
+                <div class="offer-icon">
+                    🤑
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section"
+         id="about">
+
+    <div class="section-title center">
+
+        <p>SIMPLE PROCESS</p>
+
+        <h2>
+            How FoodRush works
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Choose a restaurant
+            </h3>
+
+            <p>
+                Browse restaurants and discover
+                your favorite food.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Pick your food
+            </h3>
+
+            <p>
+                Select your favorite dishes and
+                add them to your cart.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Place your order
+            </h3>
+
+            <p>
+                Choose your address and payment
+                method.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                Enjoy your meal
+            </h3>
+
+            <p>
+                Track your order and enjoy fresh
+                food at your doorstep.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <div class="logo">
+                Food<span>Rush</span>
+            </div>
+
+            <p>
+                Delicious food delivered fast.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="customer/restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                support@foodrush.com
+            </p>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 FoodRush. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

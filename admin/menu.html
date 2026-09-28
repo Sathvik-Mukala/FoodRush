@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Menu - FoodRush</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+
+    <h2>FoodRush Admin</h2>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="customers.html">Customers</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </nav>
+
+</header>
+
+<main class="admin-container">
+
+    <h1>Manage Menu Items</h1>
+
+    <section class="admin-form-card">
+
+        <h2 id="formTitle">Add Menu Item</h2>
+
+        <form id="foodForm">
+
+            <input type="hidden" id="foodId">
+
+            <div class="form-grid">
+
+                <select id="restaurantId" required>
+                    <option value="">Select Restaurant</option>
+                </select>
+
+                <input type="text"
+                       id="name"
+                       placeholder="Food Name"
+                       required>
+
+                <input type="text"
+                       id="category"
+                       placeholder="Category"
+                       required>
+
+                <input type="number"
+                       id="price"
+                       placeholder="Price"
+                       min="1"
+                       required>
+
+                <input type="number"
+                       id="rating"
+                       placeholder="Rating"
+                       min="1"
+                       max="5"
+                       step="0.1"
+                       required>
+
+                <select id="vegetarian" required>
+                    <option value="">Food Type</option>
+                    <option value="true">Vegetarian</option>
+                    <option value="false">Non-Vegetarian</option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="admin-btn">
+                Save Menu Item
+            </button>
+
+            <button type="button"
+                    id="cancelBtn"
+                    class="admin-btn secondary"
+                    onclick="resetForm()"
+                    style="display:none;">
+                Cancel
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="admin-table-card">
+
+        <h2>Menu Items</h2>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Restaurant</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="foodTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="../js/data.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/admin-menu.js"></script>
+
+</body>
+</html>

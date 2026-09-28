@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart - FoodRush</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">FoodRush</a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search food..."
+            >
+
+            <button onclick="searchFood()">
+                🔍
+            </button>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html" class="active">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Header -->
+
+    <section class="cart-header">
+
+        <h1>Your Cart</h1>
+
+        <p>
+            Review your items before checkout
+        </p>
+
+    </section>
+
+
+    <!-- Cart -->
+
+    <main class="cart-page">
+
+        <!-- Cart Items -->
+
+        <section class="cart-items-section">
+
+            <div
+                id="cartItems"
+                class="cart-items"
+            >
+            </div>
+
+
+            <!-- Empty Cart -->
+
+            <div
+                id="emptyCart"
+                class="empty-cart"
+                style="display:none;"
+            >
+
+                <div class="empty-cart-icon">
+                    🛒
+                </div>
+
+                <h2>
+                    Your cart is empty
+                </h2>
+
+                <p>
+                    Add some delicious food to continue.
+                </p>
+
+                <button
+                    onclick="goToRestaurants()"
+                    class="primary-btn"
+                >
+                    Browse Restaurants
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+
+        <aside
+            id="cartSummary"
+            class="cart-summary"
+        >
+
+            <h2>
+                Order Summary
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Delivery Fee
+                </span>
+
+                <strong id="deliveryFee">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row discount-row">
+
+                <span>
+                    Discount
+                </span>
+
+                <strong id="discount">
+                    - ₹0
+                </strong>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- Coupon -->
+
+            <div class="coupon-section">
+
+                <h3>
+                    Apply Coupon
+                </h3>
+
+                <div class="coupon-input">
+
+                    <input
+                        type="text"
+                        id="couponInput"
+                        placeholder="Enter coupon code"
+                    >
+
+                    <button onclick="applyCoupon()">
+                        Apply
+                    </button>
+
+                </div>
+
+                <p id="couponMessage"></p>
+
+            </div>
+
+
+            <div class="summary-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                id="checkoutButton"
+                class="checkout-btn"
+                onclick="goToCheckout()"
+            >
+                Proceed to Checkout
+            </button>
+
+        </aside>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>FoodRush</h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="orders.html">Orders</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📧 support@foodrush.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/cart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Favorites - FoodRush</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/restaurant.css"
+    >
+
+</head>
+
+<body>
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">
+                FoodRush
+            </a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a
+                href="favorites.html"
+                class="active"
+            >
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="restaurant-header">
+
+        <h1>
+            My Favorites
+        </h1>
+
+        <p>
+            Your favorite restaurants
+        </p>
+
+    </section>
+
+
+    <main class="favorites-page">
+
+        <div
+            id="favoritesList"
+            class="restaurant-grid"
+        >
+        </div>
+
+
+        <div
+            id="noFavorites"
+            class="no-results"
+            style="display:none;"
+        >
+
+            <div>
+                ❤️
+            </div>
+
+            <h2>
+                No favorites yet
+            </h2>
+
+            <p>
+                Add restaurants to your favorites
+                and they will appear here.
+            </p>
+
+            <button
+                class="primary-btn favorite-browse-btn"
+                onclick="browseRestaurants()"
+            >
+                Browse Restaurants
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>
+                FoodRush
+            </h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📧 support@foodrush.com
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/favorites.js"></script>
+
+</body>
+
+</html>

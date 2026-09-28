@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurants - FoodRush</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/restaurant.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">FoodRush</a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search restaurants or food..."
+            >
+
+            <button onclick="searchRestaurants()">
+                🔍
+            </button>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="restaurants.html" class="active">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Page Header -->
+
+    <section class="restaurant-header">
+
+        <div>
+
+            <h1>Restaurants</h1>
+
+            <p>
+                Discover delicious food from restaurants near you
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+
+    <main class="restaurant-page">
+
+        <!-- Filters -->
+
+        <aside class="filters">
+
+            <h2>Filters</h2>
+
+
+            <!-- Category -->
+
+            <div class="filter-section">
+
+                <h3>Category</h3>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="All"
+                        checked
+                    >
+                    All
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="Biryani"
+                    >
+                    Biryani
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="Pizza"
+                    >
+                    Pizza
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="Burger"
+                    >
+                    Burgers
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="Chinese"
+                    >
+                    Chinese
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="Indian"
+                    >
+                    Indian
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="category"
+                        value="South Indian"
+                    >
+                    South Indian
+                </label>
+
+            </div>
+
+
+            <!-- Rating -->
+
+            <div class="filter-section">
+
+                <h3>Rating</h3>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="rating"
+                        value="0"
+                        checked
+                    >
+                    All Ratings
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="rating"
+                        value="4"
+                    >
+                    ⭐ 4.0+
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="rating"
+                        value="4.5"
+                    >
+                    ⭐ 4.5+
+                </label>
+
+            </div>
+
+
+            <!-- Delivery Time -->
+
+            <div class="filter-section">
+
+                <h3>Delivery Time</h3>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="time"
+                        value="0"
+                        checked
+                    >
+                    Any Time
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="time"
+                        value="30"
+                    >
+                    Under 30 min
+                </label>
+
+            </div>
+
+
+            <button
+                class="clear-filter"
+                onclick="clearFilters()"
+            >
+                Clear Filters
+            </button>
+
+        </aside>
+
+
+        <!-- Restaurant Results -->
+
+        <section class="restaurant-results">
+
+            <div class="results-top">
+
+                <div>
+
+                    <h2 id="resultTitle">
+                        All Restaurants
+                    </h2>
+
+                    <p id="resultCount">
+                        0 restaurants found
+                    </p>
+
+                </div>
+
+
+                <select id="sortSelect">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="rating">
+                        Rating: High to Low
+                    </option>
+
+                    <option value="delivery">
+                        Delivery Time
+                    </option>
+
+                    <option value="fee">
+                        Delivery Fee: Low to High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="restaurantList"
+                class="restaurant-grid"
+            >
+            </div>
+
+
+            <div
+                id="noResults"
+                class="no-results"
+                style="display:none;"
+            >
+
+                <div>🍽️</div>
+
+                <h2>
+                    No restaurants found
+                </h2>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>FoodRush</h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="orders.html">Orders</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📧 support@foodrush.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/restaurants.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Track Order - FoodRush</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cart.css"
+    >
+
+</head>
+
+
+<body>
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">
+                FoodRush
+            </a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="cart-header">
+
+        <h1>
+            Track Your Order
+        </h1>
+
+        <p id="trackingSubtitle">
+            Loading order...
+        </p>
+
+    </section>
+
+
+    <main class="tracking-page">
+
+        <div class="tracking-card">
+
+            <div class="tracking-top">
+
+                <div>
+
+                    <h2 id="trackingOrderId">
+                        Order
+                    </h2>
+
+                    <p id="trackingRestaurant">
+                        Restaurant
+                    </p>
+
+                </div>
+
+                <span
+                    id="currentStatus"
+                    class="order-status"
+                >
+                    Placed
+                </span>
+
+            </div>
+
+
+            <!-- Timeline -->
+
+            <div class="tracking-timeline">
+
+                <div
+                    class="timeline-step"
+                    id="step1"
+                >
+
+                    <div class="timeline-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>
+                            Order Placed
+                        </h3>
+
+                        <p>
+                            Your order has been received
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="timeline-line"
+                    id="line1"
+                ></div>
+
+
+                <div
+                    class="timeline-step"
+                    id="step2"
+                >
+
+                    <div class="timeline-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>
+                            Preparing
+                        </h3>
+
+                        <p>
+                            Restaurant is preparing your food
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="timeline-line"
+                    id="line2"
+                ></div>
+
+
+                <div
+                    class="timeline-step"
+                    id="step3"
+                >
+
+                    <div class="timeline-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>
+                            Out for Delivery
+                        </h3>
+
+                        <p>
+                            Delivery partner is on the way
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="timeline-line"
+                    id="line3"
+                ></div>
+
+
+                <div
+                    class="timeline-step"
+                    id="step4"
+                >
+
+                    <div class="timeline-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>
+                            Delivered
+                        </h3>
+
+                        <p>
+                            Enjoy your delicious meal!
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Delivery Information -->
+
+            <div class="tracking-info">
+
+                <div>
+
+                    <h3>
+                        Delivery Address
+                    </h3>
+
+                    <p id="trackingAddress">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Payment
+                    </h3>
+
+                    <p id="trackingPayment">
+                        Loading...
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Order Total
+                    </h3>
+
+                    <p id="trackingTotal">
+                        ₹0
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tracking-buttons">
+
+                <button
+                    class="secondary-btn"
+                    onclick="goToOrders()"
+                >
+                    Back to Orders
+                </button>
+
+                <button
+                    class="primary-btn"
+                    onclick="continueShopping()"
+                >
+                    Order More Food
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>
+                FoodRush
+            </h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📧 support@foodrush.com
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/track-order.js"></script>
+
+</body>
+
+</html>

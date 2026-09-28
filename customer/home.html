@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FoodRush - Home</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/home.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="customer-navbar">
+
+
+    <div class="customer-logo">
+
+        Food<span>Rush</span>
+
+    </div>
+
+
+    <div class="location-box">
+
+        <span class="location-icon">
+            📍
+        </span>
+
+        <div>
+
+            <small>
+                Deliver to
+            </small>
+
+            <strong id="userLocation">
+                Hyderabad
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="customer-search">
+
+        <span>
+            🔍
+        </span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for food or restaurants..."
+        >
+
+    </div>
+
+
+    <nav class="customer-nav-links">
+
+        <a href="home.html"
+           class="active">
+            Home
+        </a>
+
+        <a href="restaurants.html">
+            Restaurants
+        </a>
+
+        <a href="orders.html">
+            Orders
+        </a>
+
+        <a href="favorites.html">
+            ❤️
+        </a>
+
+        <a href="cart.html">
+            🛒
+            <span id="cartCount">
+                0
+            </span>
+        </a>
+
+        <a href="profile.html">
+            👤
+        </a>
+
+        <button
+            onclick="logoutUser()"
+            class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- ================= WELCOME ================= -->
+
+<section class="welcome-section">
+
+    <div class="welcome-content">
+
+
+        <div>
+
+            <p class="welcome-small">
+                WELCOME BACK 👋
+            </p>
+
+            <h1 id="welcomeName">
+                What are you craving today?
+            </h1>
+
+            <p>
+                Discover delicious food from
+                the best restaurants near you.
+            </p>
+
+
+            <button
+                class="browse-button"
+                onclick="goToRestaurants()">
+
+                Explore Restaurants
+
+            </button>
+
+        </div>
+
+
+        <div class="welcome-food">
+
+            🍕 🍔 🍜
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="home-section">
+
+
+    <div class="home-section-title">
+
+        <div>
+
+            <span>
+                EXPLORE
+            </span>
+
+            <h2>
+                What are you craving?
+            </h2>
+
+        </div>
+
+
+        <a href="restaurants.html">
+            View All →
+        </a>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Pizza')">
+
+            <div class="category-image">
+                🍕
+            </div>
+
+            <h3>
+                Pizza
+            </h3>
+
+            <p>
+                Cheesy & delicious
+            </p>
+
+        </div>
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Burger')">
+
+            <div class="category-image">
+                🍔
+            </div>
+
+            <h3>
+                Burgers
+            </h3>
+
+            <p>
+                Juicy & tasty
+            </p>
+
+        </div>
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Biryani')">
+
+            <div class="category-image">
+                🍚
+            </div>
+
+            <h3>
+                Biryani
+            </h3>
+
+            <p>
+                Rich & aromatic
+            </p>
+
+        </div>
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Chinese')">
+
+            <div class="category-image">
+                🍜
+            </div>
+
+            <h3>
+                Chinese
+            </h3>
+
+            <p>
+                Hot & flavorful
+            </p>
+
+        </div>
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Indian')">
+
+            <div class="category-image">
+                🍛
+            </div>
+
+            <h3>
+                Indian
+            </h3>
+
+            <p>
+                Authentic flavors
+            </p>
+
+        </div>
+
+
+        <div
+            class="home-category"
+            onclick="searchCategory('Dessert')">
+
+            <div class="category-image">
+                🍰
+            </div>
+
+            <h3>
+                Desserts
+            </h3>
+
+            <p>
+                Sweet treats
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= POPULAR RESTAURANTS ================= -->
+
+<section class="home-section">
+
+
+    <div class="home-section-title">
+
+        <div>
+
+            <span>
+                TOP PICKS
+            </span>
+
+            <h2>
+                Popular restaurants
+            </h2>
+
+        </div>
+
+
+        <a href="restaurants.html">
+            View All →
+        </a>
+
+    </div>
+
+
+    <div
+        class="restaurant-grid"
+        id="restaurantContainer">
+
+        <!-- JavaScript will insert restaurants here -->
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= POPULAR FOOD ================= -->
+
+<section class="home-section food-section">
+
+
+    <div class="home-section-title">
+
+        <div>
+
+            <span>
+                MOST ORDERED
+            </span>
+
+            <h2>
+                Popular dishes
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="food-grid"
+        id="foodContainer">
+
+        <!-- JavaScript will insert food -->
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section class="home-offers">
+
+
+    <div class="home-section">
+
+
+        <div class="home-section-title">
+
+            <div>
+
+                <span>
+                    SPECIAL OFFERS
+                </span>
+
+                <h2>
+                    Deals for you
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="offer-grid">
+
+
+            <div class="home-offer orange-offer">
+
+                <div>
+
+                    <small>
+                        FIRST ORDER
+                    </small>
+
+                    <h2>
+                        50% OFF
+                    </h2>
+
+                    <p>
+                        Use code
+                        <strong>
+                            WELCOME50
+                        </strong>
+                    </p>
+
+                </div>
+
+
+                <div class="big-offer-icon">
+                    🎁
+                </div>
+
+            </div>
+
+
+            <div class="home-offer dark-offer">
+
+                <div>
+
+                    <small>
+                        SPECIAL DEAL
+                    </small>
+
+                    <h2>
+                        ₹100 OFF
+                    </h2>
+
+                    <p>
+                        Use code
+                        <strong>
+                            FIRST100
+                        </strong>
+                    </p>
+
+                </div>
+
+
+                <div class="big-offer-icon">
+                    💰
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="customer-footer">
+
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <div class="customer-logo">
+                Food<span>Rush</span>
+            </div>
+
+            <p>
+                Delicious food delivered fast.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                FoodRush
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Support
+            </h3>
+
+            <p>
+                support@foodrush.com
+            </p>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 FoodRush. All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+
+<script src="../js/data.js"></script>
+
+<script src="../js/utils.js"></script>
+
+<script src="../js/customer-home.js"></script>
+
+
+</body>
+
+</html>

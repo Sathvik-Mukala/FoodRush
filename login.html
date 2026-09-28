@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - FoodRush</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Food<span>Rush</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="customer/restaurants.html">
+            Restaurants
+        </a>
+
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a href="register.html"
+           class="signup-btn">
+            Sign Up
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- LOGIN -->
+
+<main class="auth-page">
+
+    <div class="auth-container">
+
+
+        <div class="auth-info">
+
+            <div class="logo">
+                Food<span>Rush</span>
+            </div>
+
+            <h1>
+                Welcome back!
+            </h1>
+
+            <p>
+                Login to continue ordering your
+                favorite food.
+            </p>
+
+            <div class="auth-food">
+                🍔 🍕 🍜
+            </div>
+
+        </div>
+
+
+
+        <div class="auth-form">
+
+            <h2>
+                Login
+            </h2>
+
+            <p class="form-subtitle">
+                Enter your account details
+            </p>
+
+
+            <form id="loginForm">
+
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-button">
+
+                    Login
+
+                </button>
+
+
+            </form>
+
+
+            <p class="switch-auth">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </p>
+
+
+            <div class="demo-login">
+
+                <strong>
+                    Demo Admin
+                </strong>
+
+                <p>
+                    Email: admin@foodrush.com
+                </p>
+
+                <p>
+                    Password: admin123
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile - FoodRush</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cart.css"
+    >
+
+</head>
+
+<body>
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">
+                FoodRush
+            </a>
+        </div>
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+        <div class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a
+                href="profile.html"
+                class="active"
+            >
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="cart-header">
+
+        <h1>
+            My Profile
+        </h1>
+
+        <p>
+            Manage your FoodRush account
+        </p>
+
+    </section>
+
+
+    <main class="profile-page">
+
+        <section class="profile-card">
+
+            <div class="profile-avatar">
+                👤
+            </div>
+
+            <h2 id="profileName">
+                User
+            </h2>
+
+            <p id="profileEmail">
+                email@example.com
+            </p>
+
+
+            <form id="profileForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        disabled
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        maxlength="10"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Save Changes
+                </button>
+
+            </form>
+
+
+            <p
+                id="profileMessage"
+                class="profile-message"
+            ></p>
+
+        </section>
+
+
+        <section class="profile-stats">
+
+            <div class="profile-stat">
+
+                <strong id="orderCount">
+                    0
+                </strong>
+
+                <span>
+                    Orders
+                </span>
+
+            </div>
+
+
+            <div class="profile-stat">
+
+                <strong id="favoriteCount">
+                    0
+                </strong>
+
+                <span>
+                    Favorites
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>
+                FoodRush
+            </h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a href="orders.html">
+                Orders
+            </a>
+
+        </div>
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📧 support@foodrush.com
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Orders - FoodRush</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/cart.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <nav class="customer-navbar">
+
+        <div class="logo">
+            <a href="home.html">
+                FoodRush
+            </a>
+        </div>
+
+
+        <div class="location">
+            📍 Hyderabad
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="restaurants.html">
+                Restaurants
+            </a>
+
+            <a
+                href="orders.html"
+                class="active"
+            >
+                Orders
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+            <a href="cart.html">
+                Cart 🛒
+                <span id="cartCount">0</span>
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <button onclick="logoutUser()">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section class="cart-header">
+
+        <h1>
+            My Orders
+        </h1>
+
+        <p>
+            View your previous and current orders
+        </p>
+
+    </section>
+
+
+    <main class="orders-page">
+
+        <div
+            id="ordersList"
+            class="orders-list"
+        >
+        </div>
+
+
+        <div
+            id="noOrders"
+            class="empty-cart"
+            style="display:none;"
+        >
+
+            <div class="empty-cart-icon">
+                📦
+            </div>
+
+            <h2>
+                No orders yet
+            </h2>
+
+            <p>
+                Your completed orders will appear here.
+            </p>
+
+            <button
+                class="primary-btn"
+                onclick="goShopping()"
+            >
+                Start Ordering
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer class="customer-footer">
+
+        <div>
+
+            <h2>FoodRush</h2>
+
+            <p>
+                Delicious food delivered to your doorstep.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="orders.html">Orders</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <p>📧 support@foodrush.com</p>
+            <p>📞 +91 98765 43210</p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/orders.js"></script>
+
+</body>
+
+</html>
